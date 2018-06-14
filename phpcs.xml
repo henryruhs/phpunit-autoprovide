@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="PHPUnitProviderAutoLoader">
+	<description>PHPUnitProviderAutoLoader coding standard</description>
+
+	<!-- show progress -->
+
+	<arg value="p" />
+
+	<!-- inherit from redaxmedia -->
+
+	<rule ref="vendor/redaxmedia/php-coding-standard/phpcs.xml" />
+</ruleset>
