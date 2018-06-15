@@ -12,7 +12,7 @@ Installation
 ------------
 
 ```
-composer install redaxmedia/phpunit-provider-autoloader
+composer require redaxmedia/phpunit-provider-autoloader
 ```
 
 
