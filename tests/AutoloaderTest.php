@@ -14,7 +14,7 @@ namespace PHPUnitProviderAutoloader\Tests;
 class AutoloaderTest extends TestCaseAbstract
 {
 	/**
-	 * testDataProvider
+	 * testAutoloadGeneral
 	 *
 	 * @since 1.0.0
 	 *
@@ -23,8 +23,23 @@ class AutoloaderTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testDataProvider(string $expect = null)
+	public function testAutoloadGeneral(string $expect = null)
 	{
-		$this->assertEquals($expect, 'test');
+		$this->assertEquals($expect, 'general');
+	}
+
+	/**
+	 * testAutoloadMethod
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $expect
+	 *
+	 * @dataProvider providerAutoloader
+	 */
+
+	public function testAutoloadMethod(string $expect = null)
+	{
+		$this->assertEquals($expect, 'method');
 	}
 }
