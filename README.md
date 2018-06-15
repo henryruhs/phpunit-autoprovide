@@ -56,7 +56,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 }
 ```
 
-Extend your `ExampleTest` from `TestCaseAbstract` to autoload the `tests/provider/ExampleTest_testDataProvider.json` file:
+Extend `ExampleTest` from `TestCaseAbstract` to autoload the `tests/provider/ExampleTest_testMethod.json` file:
 
 ```php
 <?php
@@ -74,7 +74,7 @@ namespace ExampleProject\Tests;
 class ExampleTest extends TestCaseAbstract
 {
 	/**
-	 * testDataProvider
+	 * testMethod
 	 *
 	 * @since 1.0.0
 	 *
@@ -83,7 +83,7 @@ class ExampleTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testDataProvider(string $expect = null)
+	public function testMethod(string $expect = null)
 	{
 		$this->assertEquals($expect, 'test');
 	}
