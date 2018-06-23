@@ -56,7 +56,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 }
 ```
 
-Extend `ExampleTest` from `TestCaseAbstract` to autoload the general `tests\provider\ExampleTest.json` or method related `tests\provider\ExampleTest_testMethod.json` file:
+Extend `ExampleTest` from `TestCaseAbstract` to autoload the `tests\provider\ExampleTest{_testMethod}.json` file:
 
 ```php
 <?php
