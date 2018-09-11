@@ -36,10 +36,10 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 4.0.0
 	 *
-	 * @return array
+	 * @return array|null
 	 */
 
-	public function providerAutoloader() : array
+	public function providerAutoloader() : ?array
 	{
 		$debugArray = debug_backtrace();
 		$searchArray =
@@ -69,5 +69,6 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 			$content = file_get_contents($fileClassName);
 			return json_decode($content, true);
 		}
+		return null;
 	}
 }
