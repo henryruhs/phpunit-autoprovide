@@ -2,6 +2,11 @@
 namespace PHPUnitProviderAutoloader;
 
 use PHPUnit;
+use function debug_backtrace;
+use function file_exists;
+use function file_get_contents;
+use function json_decode;
+use function str_replace;
 
 /**
  * TestCaseAbstract

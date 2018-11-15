@@ -1,6 +1,8 @@
 <?php
 namespace PHPUnitProviderAutoloader;
 
+use function error_reporting;
+
 error_reporting(E_DEPRECATED | E_WARNING | E_ERROR | E_PARSE);
 
 /* include */

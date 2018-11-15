@@ -1,7 +1,7 @@
 {
 	"name": "redaxmedia/phpunit-provider-autoloader",
 	"description": "Magic helper to autoload JSON files for data providers in PHPUnit",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "GPL-3.0-only",
 	"require":
 	{
@@ -10,8 +10,8 @@
 	},
 	"require-dev":
 	{
-		"redaxmedia/php-coding-standard": "1.2.0",
-		"squizlabs/php_codesniffer": "3.2.3"
+		"redaxmedia/php-coding-standard": "1.2.2",
+		"squizlabs/php_codesniffer": "3.3.2"
 	},
 	"autoload":
 	{
