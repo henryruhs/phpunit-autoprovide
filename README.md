@@ -30,7 +30,7 @@ use PHPUnitProviderAutoloader;
 /**
  * TestCaseAbstract
  *
- * @since 1.0.0
+ * @since 2.0.0
  *
  * @package ExampleProject
  * @category Tests
@@ -56,7 +56,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 }
 ```
 
-Extend `ExampleTest` from `TestCaseAbstract` to autoload the `tests\provider\ExampleTest{_testMethod}.json` file:
+Extend `ExampleTest` from `TestCaseAbstract` to autoload the `tests\provider\ExampleTest{_testMethod}.{json|xml}` file:
 
 ```php
 <?php
@@ -65,7 +65,7 @@ namespace ExampleProject\Tests;
 /**
  * ExampleTest
  *
- * @since 1.0.0
+ * @since 2.0.0
  *
  * @package ExampleProject
  * @category Tests
@@ -76,7 +76,7 @@ class ExampleTest extends TestCaseAbstract
 	/**
 	 * testMethod
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param string $expect
 	 *

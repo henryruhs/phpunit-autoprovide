@@ -16,7 +16,7 @@ class AutoloaderXmlTest extends TestCaseAbstract
 	/**
 	 * testGeneral
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param string $expect
 	 *
@@ -31,7 +31,7 @@ class AutoloaderXmlTest extends TestCaseAbstract
 	/**
 	 * testMethod
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param string $expect
 	 *
