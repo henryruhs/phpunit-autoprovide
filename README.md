@@ -1,7 +1,7 @@
 PHPUnit Provider Autoloader
 ===========================
 
-> Magic helper to autoload JSON and XML files for @dataProvider in PHPUnit.
+> Magic helper to autoload JSON and XML data provider in PHPUnit.
 
 [![Build Status](https://img.shields.io/travis/redaxmedia/phpunit-provider-autoloader.svg)](https://travis-ci.org/redaxmedia/phpunit-provider-autoloader)
 [![Packagist Version](https://img.shields.io/packagist/v/redaxmedia/phpunit-provider-autoloader.svg)](https://packagist.org/packages/redaxmedia/phpunit-provider-autoloader)
