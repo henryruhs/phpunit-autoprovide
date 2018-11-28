@@ -1,8 +1,10 @@
 <?php
-namespace PHPUnitProviderAutoloader\Tests;
+namespace PHPUnitProviderAutoloader\Tests\Autoloader;
+
+use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
 
 /**
- * AutoloaderJsonTest
+ * JsonTest
  *
  * @since 1.0.0
  *
@@ -11,7 +13,7 @@ namespace PHPUnitProviderAutoloader\Tests;
  * @author Henry Ruhs
  */
 
-class AutoloaderJsonTest extends TestCaseAbstract
+class JsonTest extends TestCaseAbstract
 {
 	/**
 	 * testGeneral

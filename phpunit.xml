@@ -8,8 +8,7 @@
 		<!-- autoloader -->
 
 		<testsuite name="autoloader">
-			<file>tests/AutoloaderJsonTest.php</file>
-			<file>tests/AutoloaderXmlTest.php</file>
+			<directory>tests/phpunit/Autoloader</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>

@@ -51,10 +51,15 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 		$debugArray = debug_backtrace();
 		$searchArray =
 		[
-			$this->_testNamespace,
+			$this->_testNamespace . '\\',
 			'\\'
 		];
-		$className = str_replace($searchArray, null, $debugArray[2]['args'][1]);
+		$replaceArray =
+		[
+			null,
+			DIRECTORY_SEPARATOR
+		];
+		$className = str_replace($searchArray, $replaceArray, $debugArray[2]['args'][1]);
 		$method = $debugArray[2]['args'][2];
 
 		/* load as needed */
