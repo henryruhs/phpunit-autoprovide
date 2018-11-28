@@ -36,7 +36,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @var string
 	 */
 
-	protected $_testNamespace = __NAMESPACE__;
+	protected $_testNamespace;
 
 	/**
 	 * provider autoloader
@@ -73,7 +73,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	 * load json
+	 * load json from path
 	 *
 	 * @since 2.0.0
 	 *
@@ -104,7 +104,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	}
 
 	/**
-	 * load xml
+	 * load xml from path
 	 *
 	 * @since 2.0.0
 	 *
