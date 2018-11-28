@@ -2,7 +2,7 @@
 namespace PHPUnitProviderAutoloader\Tests;
 
 /**
- * AutoloaderTest
+ * AutoloaderXmlTest
  *
  * @since 1.0.0
  *
@@ -11,34 +11,34 @@ namespace PHPUnitProviderAutoloader\Tests;
  * @author Henry Ruhs
  */
 
-class AutoloaderTest extends TestCaseAbstract
+class AutoloaderXmlTest extends TestCaseAbstract
 {
 	/**
-	 * testAutoloadGeneral
+	 * testGeneral
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testAutoloadGeneral(string $expect = null)
+	public function testGeneral(string $expect = null)
 	{
 		$this->assertEquals($expect, 'general');
 	}
 
 	/**
-	 * testAutoloadMethod
+	 * testMethod
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testAutoloadMethod(string $expect = null)
+	public function testMethod(string $expect = null)
 	{
 		$this->assertEquals($expect, 'method');
 	}
