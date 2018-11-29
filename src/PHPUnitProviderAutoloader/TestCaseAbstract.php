@@ -1,7 +1,9 @@
 <?php
 namespace PHPUnitProviderAutoloader;
 
+use KzykHys\CsvParser\CsvParser;
 use PHPUnit;
+use Symfony\Component\Yaml\Yaml as YamlParser;
 use function debug_backtrace;
 use function file_exists;
 use function file_get_contents;
@@ -74,6 +76,37 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 		{
 			return $xml;
 		}
+		$yaml = $this->_loadYAML($className, $method);
+		if ($yaml)
+		{
+			return $yaml;
+		}
+		$csv = $this->_loadCSV($className, $method);
+		if ($csv)
+		{
+			return $csv;
+		}
+		return null;
+	}
+
+	/**
+	 * load csv from path
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $className name of the class
+	 * @param string $method name of the method
+	 *
+	 * @return array|null
+	 */
+
+	protected function _loadCSV(string $className = null, string $method = null) : ?array
+	{
+		$content = $this->_loadContent($className, $method, 'csv');
+		if ($content)
+		{
+			return CsvParser::fromString($content)->parse();
+		}
 		return null;
 	}
 
@@ -90,19 +123,10 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadJSON(string $className = null, string $method = null) : ?array
 	{
-		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.json';
-		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $method . '.json';
 
-		/* load as needed */
-
-		if (file_exists($fileMethod))
+		$content = $this->_loadContent($className, $method, 'json');
+		if ($content)
 		{
-			$content = file_get_contents($fileMethod);
-			return json_decode($content, true);
-		}
-		if (file_exists($fileClassName))
-		{
-			$content = file_get_contents($fileClassName);
 			return json_decode($content, true);
 		}
 		return null;
@@ -121,20 +145,61 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadXML(string $className = null, string $method = null) : ?array
 	{
-		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.xml';
-		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $method . '.xml';
+		$content = $this->_loadContent($className, $method, 'xml');
+		if ($content)
+		{
+			return json_decode(json_encode(simplexml_load_string($content)), true);
+		}
+		return null;
+	}
+
+	/**
+	 * load yaml from path
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $className name of the class
+	 * @param string $method name of the method
+	 *
+	 * @return array|null
+	 */
+
+	protected function _loadYAML(string $className = null, string $method = null) : ?array
+	{
+		$content = $this->_loadContent($className, $method, 'yml');
+		if ($content)
+		{
+			return YamlParser::parse($content);
+		}
+		return null;
+	}
+
+	/**
+	 * load content from path
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $className name of the class
+	 * @param string $method name of the method
+	 * @param string $fileExtension extension of the file
+	 *
+	 * @return string|null
+	 */
+
+	protected function _loadContent(string $className = null, string $method = null, string $fileExtension = null) : ?string
+	{
+		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.' . $fileExtension;
+		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $method . '.' . $fileExtension;
 
 		/* load as needed */
 
 		if (file_exists($fileMethod))
 		{
-			$content = file_get_contents($fileMethod);
-			return json_decode(json_encode(simplexml_load_string($content)), true);
+			return file_get_contents($fileMethod);
 		}
 		if (file_exists($fileClassName))
 		{
-			$content = file_get_contents($fileClassName);
-			return json_decode(json_encode(simplexml_load_string($content)), true);
+			return file_get_contents($fileClassName);
 		}
 		return null;
 	}

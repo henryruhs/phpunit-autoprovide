@@ -4,7 +4,7 @@ namespace PHPUnitProviderAutoloader\Tests\Autoloader;
 use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
 
 /**
- * XmlTest
+ * YamlTest
  *
  * @since 2.0.0
  *
@@ -13,7 +13,7 @@ use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
  * @author Henry Ruhs
  */
 
-class XmlTest extends TestCaseAbstract
+class YamlTest extends TestCaseAbstract
 {
 	/**
 	 * testGeneral
