@@ -56,7 +56,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 }
 ```
 
-Extend `ExampleTest` from `TestCaseAbstract` to autoload the `ExampleTest{_testMethod}.{csv|json|xml|yml}` data provider:
+Extend `ExampleTest` from `TestCaseAbstract` to autoload the `ExampleTest{_testMethod}.{csv|json|xml|yml}` file:
 
 ```php
 <?php
