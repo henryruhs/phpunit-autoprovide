@@ -66,6 +66,11 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 		/* load as needed */
 
+		$php = $this->_loadPHP($className, $method);
+		if ($php)
+		{
+			return $php;
+		}
 		$json = $this->_loadJSON($className, $method);
 		if ($json)
 		{
@@ -123,11 +128,31 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadJSON(string $className = null, string $method = null) : ?array
 	{
-
 		$content = $this->_loadContent($className, $method, 'json');
 		if ($content)
 		{
 			return json_decode($content, true);
+		}
+		return null;
+	}
+
+	/**
+	 * load php from path
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param string $className name of the class
+	 * @param string $method name of the method
+	 *
+	 * @return array|null
+	 */
+
+	protected function _loadPHP(string $className = null, string $method = null) : ?array
+	{
+		$content = $this->_loadArray($className, $method, 'php');
+		if ($content)
+		{
+			return $content;
 		}
 		return null;
 	}
@@ -180,16 +205,16 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @since 2.0.0
 	 *
 	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string $methodName name of the method
 	 * @param string $fileExtension extension of the file
 	 *
 	 * @return string|null
 	 */
 
-	protected function _loadContent(string $className = null, string $method = null, string $fileExtension = null) : ?string
+	protected function _loadContent(string $className = null, string $methodName = null, string $fileExtension = null) : ?string
 	{
+		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $methodName . '.' . $fileExtension;
 		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.' . $fileExtension;
-		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $method . '.' . $fileExtension;
 
 		/* load as needed */
 
@@ -200,6 +225,36 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 		if (file_exists($fileClassName))
 		{
 			return file_get_contents($fileClassName);
+		}
+		return null;
+	}
+
+	/**
+	 * load array from path
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param string $className name of the class
+	 * @param string $methodName name of the method
+	 * @param string $fileExtension extension of the file
+	 *
+	 * @return array|null
+	 */
+
+	protected function _loadArray(string $className = null, string $methodName = null, string $fileExtension = null) : ?array
+	{
+		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $methodName . '.' . $fileExtension;
+		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.' . $fileExtension;
+
+		/* load as needed */
+
+		if (file_exists($fileMethod))
+		{
+			return include($fileMethod);
+		}
+		if (file_exists($fileClassName))
+		{
+			return include($fileClassName);
 		}
 		return null;
 	}

@@ -4,21 +4,21 @@ namespace PHPUnitProviderAutoloader\Tests\Autoloader;
 use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
 
 /**
- * JsonTest
+ * CsvTest
  *
- * @since 1.0.0
+ * @since 2.1.0
  *
  * @package PHPUnitProviderAutoloader
  * @category Tests
  * @author Henry Ruhs
  */
 
-class JsonTest extends TestCaseAbstract
+class PhpTest extends TestCaseAbstract
 {
 	/**
 	 * testClass
 	 *
-	 * @since 1.0.0
+	 * @since 2.1.0
 	 *
 	 * @param string $expect
 	 *
@@ -27,13 +27,13 @@ class JsonTest extends TestCaseAbstract
 
 	public function testClass(string $expect = null)
 	{
-		$this->assertEquals($expect, 'class-json');
+		$this->assertEquals($expect, 'class-php');
 	}
 
 	/**
 	 * testMethod
 	 *
-	 * @since 1.0.0
+	 * @since 2.1.0
 	 *
 	 * @param string $expect
 	 *
@@ -42,6 +42,6 @@ class JsonTest extends TestCaseAbstract
 
 	public function testMethod(string $expect = null)
 	{
-		$this->assertEquals($expect, 'method-json');
+		$this->assertEquals($expect, 'method-php');
 	}
 }

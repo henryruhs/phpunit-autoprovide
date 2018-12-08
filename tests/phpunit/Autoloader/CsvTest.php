@@ -16,7 +16,7 @@ use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
 class CsvTest extends TestCaseAbstract
 {
 	/**
-	 * testGeneral
+	 * testClass
 	 *
 	 * @since 2.0.0
 	 *
@@ -25,9 +25,9 @@ class CsvTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testGeneral(string $expect = null)
+	public function testClass(string $expect = null)
 	{
-		$this->assertEquals($expect, 'general');
+		$this->assertEquals($expect, 'class-csv');
 	}
 
 	/**
@@ -42,6 +42,6 @@ class CsvTest extends TestCaseAbstract
 
 	public function testMethod(string $expect = null)
 	{
-		$this->assertEquals($expect, 'method');
+		$this->assertEquals($expect, 'method-csv');
 	}
 }
