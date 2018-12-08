@@ -3,6 +3,6 @@
 return
 [
 	[
-    	'method-php'
+		'method-php'
 	]
 ];

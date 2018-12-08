@@ -3,6 +3,6 @@
 return
 [
 	[
-    	'class-php'
+		'class-php'
 	]
 ];
