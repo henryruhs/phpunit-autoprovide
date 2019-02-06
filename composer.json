@@ -1,19 +1,19 @@
 {
 	"name": "redaxmedia/phpunit-provider-autoloader",
 	"description": "Magic helper to autoload CSV, JSON, PHP, XML and YAML data provider in PHPUnit",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"license": "GPL-3.0-only",
 	"require":
 	{
 		"kzykhys/php-csv-parser": "^1.4",
 		"php": "^7.1",
-		"phpunit/phpunit": "^7",
+		"phpunit/phpunit": "^8",
 		"symfony/yaml": "^4"
 	},
 	"require-dev":
 	{
 		"redaxmedia/php-coding-standard": "1.2.2",
-		"squizlabs/php_codesniffer": "3.3.2"
+		"squizlabs/php_codesniffer": "3.4.0"
 	},
 	"autoload":
 	{
