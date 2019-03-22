@@ -25,7 +25,7 @@ class PhpTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testClass(string $expect = null)
+	public function testClass(string $expect = null) : void
 	{
 		$this->assertEquals($expect, 'class-php');
 	}
@@ -40,7 +40,7 @@ class PhpTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testMethod(string $expect = null)
+	public function testMethod(string $expect = null) : void
 	{
 		$this->assertEquals($expect, 'method-php');
 	}
