@@ -61,8 +61,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 			null,
 			DIRECTORY_SEPARATOR
 		];
-		$className = str_replace($searchArray, $replaceArray, $debugArray[2]['args'][1]);
-		$method = $debugArray[2]['args'][2];
+		$className = str_replace($searchArray, $replaceArray, $debugArray[4]['args'][0]);
+		$method = $debugArray[4]['args'][1];
 
 		/* load as needed */
 
