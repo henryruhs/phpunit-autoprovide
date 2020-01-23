@@ -1,15 +1,11 @@
 <?php
 namespace PHPUnitProviderAutoloader;
 
-use KzykHys\CsvParser\CsvParser;
 use PHPUnit;
-use Symfony\Component\Yaml\Yaml as YamlParser;
+use Symfony;
 use function debug_backtrace;
 use function file_exists;
 use function file_get_contents;
-use function json_decode;
-use function json_encode;
-use function simplexml_load_string;
 use function str_replace;
 
 /**
@@ -107,10 +103,17 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadCSV(string $className = null, string $method = null) : ?array
 	{
+		$serializer = new Symfony\Component\Serializer\Serializer(
+		[
+			new Symfony\Component\Serializer\Normalizer\ObjectNormalizer()
+		],
+		[
+			new Symfony\Component\Serializer\Encoder\CsvEncoder()
+		]);
 		$content = $this->_loadContent($className, $method, 'csv');
 		if ($content)
 		{
-			return CsvParser::fromString($content)->parse();
+			return $serializer->decode($content, 'csv');
 		}
 		return null;
 	}
@@ -128,10 +131,17 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadJSON(string $className = null, string $method = null) : ?array
 	{
+		$serializer = new Symfony\Component\Serializer\Serializer(
+		[
+			new Symfony\Component\Serializer\Normalizer\ObjectNormalizer()
+		],
+		[
+			new Symfony\Component\Serializer\Encoder\JsonEncoder()
+		]);
 		$content = $this->_loadContent($className, $method, 'json');
 		if ($content)
 		{
-			return json_decode($content, true);
+			return $serializer->decode($content, 'json');
 		}
 		return null;
 	}
@@ -170,10 +180,17 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadXML(string $className = null, string $method = null) : ?array
 	{
+		$serializer = new Symfony\Component\Serializer\Serializer(
+		[
+			new Symfony\Component\Serializer\Normalizer\ObjectNormalizer()
+		],
+		[
+			new Symfony\Component\Serializer\Encoder\XmlEncoder()
+		]);
 		$content = $this->_loadContent($className, $method, 'xml');
 		if ($content)
 		{
-			return json_decode(json_encode(simplexml_load_string($content)), true);
+			return $serializer->decode($content, 'xml');
 		}
 		return null;
 	}
@@ -191,10 +208,17 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 
 	protected function _loadYAML(string $className = null, string $method = null) : ?array
 	{
+		$serializer = new Symfony\Component\Serializer\Serializer(
+		[
+			new Symfony\Component\Serializer\Normalizer\ObjectNormalizer()
+		],
+		[
+			new Symfony\Component\Serializer\Encoder\YamlEncoder()
+		]);
 		$content = $this->_loadContent($className, $method, 'yml');
 		if ($content)
 		{
-			return YamlParser::parse($content);
+			return $serializer->decode($content, 'yml');
 		}
 		return null;
 	}
