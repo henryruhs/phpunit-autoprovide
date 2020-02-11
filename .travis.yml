@@ -1,16 +1,38 @@
 language: php
 
-php:
-- 7.2
-- 7.3
-- 7.4snapshot
+php: 7.2
 
 before_install:
 - composer global require hirak/prestissimo
 
-install:
-- composer install
+jobs:
+  include:
+  - &lint
+    env:
+    - LINT
 
-script:
-- composer run lint
-- composer run test
+    install:
+    - composer install
+
+    script:
+    - composer run lint
+
+  - &test-unit
+    env:
+    - TEST=unit
+
+    install:
+    - composer install
+
+    script:
+    - composer run test
+
+  - <<: *test-unit
+    php: 7.3
+
+  - <<: *test-unit
+    php: 7.4
+
+    install:
+    - composer require phpunit 9
+    - composer install

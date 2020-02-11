@@ -56,7 +56,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 }
 ```
 
-Extend `ExampleTest` from `TestCaseAbstract` to autoload the `ExampleTest{_testMethod}.*` file:
+Extend `ExampleTest` from `TestCaseAbstract` and set `@dataProvider` as needed:
 
 ```php
 <?php
@@ -88,4 +88,14 @@ class ExampleTest extends TestCaseAbstract
 		$this->assertEquals($expect, 'test');
 	}
 }
+```
+
+Create the `ExampleTest.{csv|json|php|xml|yml}` or `ExampleTest_testMethod.{csv|json|php|xml|yml}` file:
+
+```json
+[
+	[
+		"test"
+	]
+]
 ```
