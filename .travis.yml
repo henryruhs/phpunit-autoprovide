@@ -5,14 +5,14 @@ php: 7.2
 before_install:
 - composer global require hirak/prestissimo
 
+install:
+- composer install
+
 jobs:
   include:
   - &lint
     env:
     - LINT
-
-    install:
-    - composer install
 
     script:
     - composer run lint
@@ -20,9 +20,6 @@ jobs:
   - &test-unit
     env:
     - TEST=unit
-
-    install:
-    - composer install
 
     script:
     - composer run test
@@ -34,5 +31,5 @@ jobs:
     php: 7.4
 
     install:
-    - composer require phpunit 9
+    - composer require phpunit/phpunit 9
     - composer install
