@@ -90,7 +90,7 @@ class ExampleTest extends TestCaseAbstract
 }
 ```
 
-Create the `ExampleTest.{csv|json|php|xml|yml}` or `ExampleTest_testMethod.{csv|json|php|xml|yml}` file:
+Create the `ExampleTest{_testMethod}.{csv|json|php|xml|yml}` file:
 
 ```json
 [
