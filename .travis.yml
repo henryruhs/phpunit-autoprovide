@@ -9,27 +9,27 @@ install:
 - composer install
 
 jobs:
-  include:
-  - &lint
-    env:
-    - LINT
+ include:
+ - &lint
+   env:
+   - LINT
 
-    script:
-    - composer run lint
+   script:
+   - composer run lint
 
-  - &test-unit
-    env:
-    - TEST=unit
+ - &test-unit
+   env:
+   - TEST=unit
 
-    script:
-    - composer run test
+   script:
+   - composer run test
 
-  - <<: *test-unit
-    php: 7.3
+ - <<: *test-unit
+   php: 7.3
 
-  - <<: *test-unit
-    php: 7.4
+ - <<: *test-unit
+   php: 7.4
 
-    install:
-    - composer require phpunit/phpunit 9
-    - composer install
+   install:
+   - composer require phpunit/phpunit 9
+   - composer install
