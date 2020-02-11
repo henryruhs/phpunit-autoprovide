@@ -6,7 +6,7 @@
 	"require":
 	{
 		"php": "^7.2",
-		"phpunit/phpunit": "9",
+		"phpunit/phpunit": "^8",
 		"symfony/property-access": "^5",
 		"symfony/serializer": "^5",
 		"symfony/yaml": "^5"
