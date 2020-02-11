@@ -30,7 +30,7 @@ use PHPUnitProviderAutoloader;
 /**
  * TestCaseAbstract
  *
- * @since 2.0.0
+ * @since 4.0.0
  *
  * @package ExampleProject
  * @category Tests
@@ -65,7 +65,7 @@ namespace ExampleProject\Tests;
 /**
  * ExampleTest
  *
- * @since 2.0.0
+ * @since 4.0.0
  *
  * @package ExampleProject
  * @category Tests
@@ -76,14 +76,14 @@ class ExampleTest extends TestCaseAbstract
 	/**
 	 * testMethod
 	 *
-	 * @since 2.0.0
+	 * @since 4.0.0
 	 *
 	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testMethod(string $expect = null)
+	public function testMethod(string $expect = null) : void
 	{
 		$this->assertEquals($expect, 'test');
 	}
