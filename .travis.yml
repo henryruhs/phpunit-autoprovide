@@ -33,3 +33,13 @@ jobs:
    before_install:
    - composer global require hirak/prestissimo
    - composer require phpunit/phpunit 9
+
+ - <<: *test-unit
+   php: nightly
+
+   before_install:
+   - composer global require hirak/prestissimo --ignore-platform-reqs
+   - composer require phpunit/phpunit 9 --ignore-platform-reqs
+
+   install:
+   - composer install --ignore-platform-reqs
