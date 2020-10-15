@@ -1,11 +1,11 @@
 {
 	"name": "redaxmedia/phpunit-provider-autoloader",
 	"description": "Magic helper to autoload CSV, JSON, PHP, XML and YAML data provider in PHPUnit",
-	"version": "4.1.1",
+	"version": "4.2.0",
 	"license": "MIT",
 	"require":
 	{
-		"php": "^7.2",
+		"php": "^7.2 || ^8",
 		"phpunit/phpunit": "^8 || ^9",
 		"symfony/property-access": "^5",
 		"symfony/serializer": "^5",
