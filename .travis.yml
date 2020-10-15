@@ -2,9 +2,6 @@ language: php
 
 php: 7.2
 
-before_install:
-- composer global require hirak/prestissimo
-
 install:
 - composer install
 
@@ -31,14 +28,12 @@ jobs:
    php: 7.4
 
    before_install:
-   - composer global require hirak/prestissimo
    - composer require phpunit/phpunit 9
 
  - <<: *test-unit
    php: nightly
 
    before_install:
-   - composer global require hirak/prestissimo --ignore-platform-reqs
    - composer require phpunit/phpunit 9 --ignore-platform-reqs
 
    install:
