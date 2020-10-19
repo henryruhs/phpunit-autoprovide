@@ -95,8 +95,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string|null $className name of the class
+	 * @param string|null $method name of the method
 	 *
 	 * @return array|null
 	 */
@@ -123,8 +123,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string|null $className name of the class
+	 * @param string|null $method name of the method
 	 *
 	 * @return array|null
 	 */
@@ -151,8 +151,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string|null $className name of the class
+	 * @param string|null $method name of the method
 	 *
 	 * @return array|null
 	 */
@@ -172,8 +172,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string|null $className name of the class
+	 * @param string|null $method name of the method
 	 *
 	 * @return array|null
 	 */
@@ -200,8 +200,8 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $method name of the method
+	 * @param string|null $className name of the class
+	 * @param string|null $method name of the method
 	 *
 	 * @return array|null
 	 */
@@ -228,9 +228,9 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $methodName name of the method
-	 * @param string $fileExtension extension of the file
+	 * @param string|null $className name of the class
+	 * @param string|null $methodName name of the method
+	 * @param string|null $fileExtension extension of the file
 	 *
 	 * @return string|null
 	 */
@@ -258,9 +258,9 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string $className name of the class
-	 * @param string $methodName name of the method
-	 * @param string $fileExtension extension of the file
+	 * @param string|null $className name of the class
+	 * @param string|null $methodName name of the method
+	 * @param string|null $fileExtension extension of the file
 	 *
 	 * @return array|null
 	 */
