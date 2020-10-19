@@ -27,14 +27,11 @@ jobs:
  - <<: *test-unit
    php: 7.4
 
-   before_install:
-   - composer require phpunit/phpunit 9
-
  - <<: *test-unit
    php: nightly
 
    before_install:
-   - composer require phpunit/phpunit 9 --ignore-platform-reqs
+   - composer require phpunit/phpunit 9 --dev --no-update
 
    install:
    - composer install --ignore-platform-reqs
