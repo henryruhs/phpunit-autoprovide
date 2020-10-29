@@ -20,7 +20,7 @@ class YamlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
@@ -35,7 +35,7 @@ class YamlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */

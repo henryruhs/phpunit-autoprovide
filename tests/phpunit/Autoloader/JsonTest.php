@@ -20,7 +20,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
@@ -35,7 +35,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */

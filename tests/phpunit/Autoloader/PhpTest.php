@@ -20,7 +20,7 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
@@ -35,7 +35,7 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string $expect
+	 * @param string|null $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
