@@ -35,12 +35,12 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string|null $expect
+	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testMethod(string $expect = null) : void
+	public function testMethod(string $expect) : void
 	{
 		$this->assertEquals($expect, 'method-php');
 	}

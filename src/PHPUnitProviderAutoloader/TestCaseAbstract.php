@@ -95,13 +95,13 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $method name of the method
+	 * @param string $className name of the class
+	 * @param string $method name of the method
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadCSV(string $className = null, string $method = null) : ?array
+	protected function _loadCSV(string $className, string $method ) : ?array
 	{
 		$serializer = new Symfony\Component\Serializer\Serializer(
 		[
@@ -123,13 +123,13 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $method name of the method
+	 * @param string $className name of the class
+	 * @param string $method name of the method
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadJSON(string $className = null, string $method = null) : ?array
+	protected function _loadJSON(string $className, string $method) : ?array
 	{
 		$serializer = new Symfony\Component\Serializer\Serializer(
 		[
@@ -151,13 +151,13 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $method name of the method
+	 * @param string $className name of the class
+	 * @param string $method name of the method
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadPHP(string $className = null, string $method = null) : ?array
+	protected function _loadPHP(string $className, string $method) : ?array
 	{
 		$content = $this->_loadArray($className, $method, 'php');
 		if ($content)
@@ -172,13 +172,13 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $method name of the method
+	 * @param string $className name of the class
+	 * @param string $method name of the method
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadXML(string $className = null, string $method = null) : ?array
+	protected function _loadXML(string $className, string $method) : ?array
 	{
 		$serializer = new Symfony\Component\Serializer\Serializer(
 		[
@@ -200,13 +200,13 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $method name of the method
+	 * @param string $className name of the class
+	 * @param string $method name of the method
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadYAML(string $className = null, string $method = null) : ?array
+	protected function _loadYAML(string $className, string $method) : ?array
 	{
 		$serializer = new Symfony\Component\Serializer\Serializer(
 		[
@@ -228,14 +228,14 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $methodName name of the method
-	 * @param string|null $fileExtension extension of the file
+	 * @param string $className name of the class
+	 * @param string $methodName name of the method
+	 * @param string $fileExtension extension of the file
 	 *
 	 * @return string|null
 	 */
 
-	protected function _loadContent(string $className = null, string $methodName = null, string $fileExtension = null) : ?string
+	protected function _loadContent(string $className, string $methodName, string $fileExtension) : ?string
 	{
 		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $methodName . '.' . $fileExtension;
 		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.' . $fileExtension;
@@ -258,14 +258,14 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.1.0
 	 *
-	 * @param string|null $className name of the class
-	 * @param string|null $methodName name of the method
-	 * @param string|null $fileExtension extension of the file
+	 * @param string $className name of the class
+	 * @param string $methodName name of the method
+	 * @param string $fileExtension extension of the file
 	 *
 	 * @return array|null
 	 */
 
-	protected function _loadArray(string $className = null, string $methodName = null, string $fileExtension = null) : ?array
+	protected function _loadArray(string $className, string $methodName, string $fileExtension) : ?array
 	{
 		$fileMethod = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '_' . $methodName . '.' . $fileExtension;
 		$fileClassName = $this->_providerDirectory . DIRECTORY_SEPARATOR . $className . '.' . $fileExtension;

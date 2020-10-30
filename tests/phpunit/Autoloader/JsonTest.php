@@ -20,12 +20,12 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string|null $expect
+	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testClass(string $expect = null) : void
+	public function testClass(string $expect) : void
 	{
 		$this->assertEquals($expect, 'class-json');
 	}
@@ -35,12 +35,12 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string|null $expect
+	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testMethod(string $expect = null) : void
+	public function testMethod(string $expect) : void
 	{
 		$this->assertEquals($expect, 'method-json');
 	}
