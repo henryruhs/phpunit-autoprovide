@@ -45,7 +45,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 	 */
 
 	protected $_providerDirectory = 'tests' . DIRECTORY_SEPARATOR . 'provider';
-    	
+
 	/**
 	 * namespace of the testing suite
 	 *
@@ -83,7 +83,7 @@ class ExampleTest extends TestCaseAbstract
 	 * @dataProvider providerAutoloader
 	 */
 
-	public function testMethod(string $expect = null) : void
+	public function testMethod(string $expect) : void
 	{
 		$this->assertEquals($expect, 'test');
 	}
