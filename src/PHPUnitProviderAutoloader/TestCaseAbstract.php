@@ -101,7 +101,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @return array|null
 	 */
 
-	protected function _loadCSV(string $className, string $method ) : ?array
+	protected function _loadCSV(string $className, string $method) : ?array
 	{
 		$serializer = new Symfony\Component\Serializer\Serializer(
 		[
