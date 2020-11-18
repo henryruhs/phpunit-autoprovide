@@ -45,7 +45,7 @@ jobs:
      php-version: 7.4
   - run: composer global require twinh/php-coveralls
   - run: composer install
-  - run: phpunit --coverage-clover=build/clover.xml
+  - run: vendor/bin/phpunit --coverage-clover=build/clover.xml
   - name: Report to coveralls
     run: php-coveralls --coverage_clover=build/clover.xml
     env:
