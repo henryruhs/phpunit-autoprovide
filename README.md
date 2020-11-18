@@ -4,7 +4,6 @@ PHPUnit Provider Autoloader
 > Magic helper to autoload CSV, JSON, PHP, XML and YAML data provider in PHPUnit.
 
 [![Build Status](https://img.shields.io/github/workflow/status/redaxmedia/phpunit-provider-autoloader/ci.svg)](https://github.com/redaxmedia/phpunit-provider-autoloader/actions?query=workflow:ci)
-[![Coverage Status](https://coveralls.io/repos/github/redaxmedia/phpunit-provider-autoloader/badge.svg)](https://coveralls.io/github/redaxmedia/phpunit-provider-autoloader)
 [![Packagist Version](https://img.shields.io/packagist/v/redaxmedia/phpunit-provider-autoloader.svg)](https://packagist.org/packages/redaxmedia/phpunit-provider-autoloader)
 [![License](https://img.shields.io/packagist/l/redaxmedia/phpunit-provider-autoloader.svg)](https://packagist.org/packages/redaxmedia/phpunit-provider-autoloader)
 
