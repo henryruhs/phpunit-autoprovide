@@ -27,9 +27,9 @@ jobs:
     with:
      php-version: ${{ matrix.php-version }}
   - run: composer require phpunit/phpunit 9 --dev --no-update
-    if: "matrix.php-version > 7.4"
+    if: matrix.php-version > 7.4
   - run: composer install --ignore-platform-reqs
-    if: "matrix.php-version > 7.4"
+    if: matrix.php-version > 7.4
   - run: composer install
-    if: "matrix.php-version < 8"
+    if: matrix.php-version < 8
   - run: composer run test
