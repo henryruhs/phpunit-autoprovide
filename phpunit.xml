@@ -5,7 +5,7 @@
 
 	<coverage processUncoveredFiles="true">
 		<include>
-			<directory>src</directory>
+			<directory suffix=".php">src</directory>
 		</include>
 	</coverage>
 
