@@ -16,7 +16,7 @@ composer require redaxmedia/phpunit-provider-autoloader
 ```
 
 
-Usage
+Setup
 -----
 
 Create the `TestCaseAbstract` for your testing suite:
@@ -55,6 +55,10 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 	protected $_testNamespace = __NAMESPACE__;
 }
 ```
+
+
+Usage
+-----
 
 Extend `ExampleTest` from `TestCaseAbstract` and set `@dataProvider` as needed:
 
