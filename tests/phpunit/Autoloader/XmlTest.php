@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types = 1);
+
 namespace PHPUnitProviderAutoloader\Tests\Autoloader;
 
 use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
@@ -20,7 +23,6 @@ class XmlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */
@@ -35,7 +37,6 @@ class XmlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $expect
 	 *
 	 * @dataProvider providerAutoloader
 	 */

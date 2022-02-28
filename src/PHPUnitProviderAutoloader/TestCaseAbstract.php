@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types = 1);
+
 namespace PHPUnitProviderAutoloader;
 
 use PHPUnit;
@@ -22,26 +25,22 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 {
 	/**
 	 * directory of the provider
-	 *
-	 * @var string
 	 */
 
-	protected $_providerDirectory = 'tests' . DIRECTORY_SEPARATOR . 'provider';
+	protected string $_providerDirectory = 'tests' . DIRECTORY_SEPARATOR . 'provider';
 
 	/**
 	 * namespace of the testing suite
-	 *
-	 * @var string
 	 */
 
-	protected $_testNamespace;
+	protected string $_testNamespace;
 
 	/**
 	 * provider autoloader
 	 *
 	 * @since 2.0.0
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	public function providerAutoloader() : ?array
@@ -98,7 +97,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $className name of the class
 	 * @param string $method name of the method
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadCSV(string $className, string $method) : ?array
@@ -126,7 +125,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $className name of the class
 	 * @param string $method name of the method
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadJSON(string $className, string $method) : ?array
@@ -154,7 +153,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $className name of the class
 	 * @param string $method name of the method
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadPHP(string $className, string $method) : ?array
@@ -175,7 +174,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $className name of the class
 	 * @param string $method name of the method
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadXML(string $className, string $method) : ?array
@@ -203,7 +202,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $className name of the class
 	 * @param string $method name of the method
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadYAML(string $className, string $method) : ?array
@@ -232,7 +231,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $methodName name of the method
 	 * @param string $fileExtension extension of the file
 	 *
-	 * @return string|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadContent(string $className, string $methodName, string $fileExtension) : ?string
@@ -262,7 +261,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @param string $methodName name of the method
 	 * @param string $fileExtension extension of the file
 	 *
-	 * @return array|null
+	 * @return ?string[]
 	 */
 
 	protected function _loadArray(string $className, string $methodName, string $fileExtension) : ?array

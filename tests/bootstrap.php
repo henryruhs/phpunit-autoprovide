@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types = 1);
+
 namespace PHPUnitProviderAutoloader;
 
 use function error_reporting;

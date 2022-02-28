@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types = 1);
+
 namespace PHPUnitProviderAutoloader\Tests;
 
 use PHPUnitProviderAutoloader;
@@ -18,8 +21,7 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 	/**
 	 * namespace of the testing suite
 	 *
-	 * @var string
 	 */
 
-	protected $_testNamespace = __NAMESPACE__;
+	protected string $_testNamespace = __NAMESPACE__;
 }
