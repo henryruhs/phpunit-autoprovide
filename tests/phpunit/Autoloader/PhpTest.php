@@ -23,7 +23,6 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 *
 	 * @dataProvider providerAutoloader
 	 */
 
@@ -36,7 +35,6 @@ class PhpTest extends TestCaseAbstract
 	 * testMethod
 	 *
 	 * @since 2.1.0
-	 *
 	 *
 	 * @dataProvider providerAutoloader
 	 */

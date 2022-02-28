@@ -23,7 +23,6 @@ class YamlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 *
 	 * @dataProvider providerAutoloader
 	 */
 
@@ -36,7 +35,6 @@ class YamlTest extends TestCaseAbstract
 	 * testMethod
 	 *
 	 * @since 2.0.0
-	 *
 	 *
 	 * @dataProvider providerAutoloader
 	 */

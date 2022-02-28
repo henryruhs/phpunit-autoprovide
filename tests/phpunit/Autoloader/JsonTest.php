@@ -23,7 +23,6 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 *
 	 * @dataProvider providerAutoloader
 	 */
 
@@ -36,7 +35,6 @@ class JsonTest extends TestCaseAbstract
 	 * testMethod
 	 *
 	 * @since 1.0.0
-	 *
 	 *
 	 * @dataProvider providerAutoloader
 	 */

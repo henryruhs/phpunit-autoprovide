@@ -20,7 +20,6 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 {
 	/**
 	 * namespace of the testing suite
-	 *
 	 */
 
 	protected string $_testNamespace = __NAMESPACE__;

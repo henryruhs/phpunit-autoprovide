@@ -30,8 +30,6 @@ use PHPUnitProviderAutoloader;
 /**
  * TestCaseAbstract
  *
- * @since 4.0.0
- *
  * @package ExampleProject
  * @category Tests
  */
@@ -40,16 +38,12 @@ abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstra
 {
 	/**
 	 * directory of the provider
-	 *
-	 * @var string
 	 */
 
 	protected $_providerDirectory = 'tests' . DIRECTORY_SEPARATOR . 'provider';
 
 	/**
 	 * namespace of the testing suite
-	 *
-	 * @var string
 	 */
 
 	protected $_testNamespace = __NAMESPACE__;
@@ -69,8 +63,6 @@ namespace ExampleProject\Tests;
 /**
  * ExampleTest
  *
- * @since 4.0.0
- *
  * @package ExampleProject
  * @category Tests
  */
@@ -79,8 +71,6 @@ class ExampleTest extends TestCaseAbstract
 {
 	/**
 	 * testMethod
-	 *
-	 * @since 4.0.0
 	 *
 	 * @param string $expect
 	 *
