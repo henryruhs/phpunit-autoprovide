@@ -18,7 +18,7 @@ jobs:
   runs-on: ubuntu-latest
   strategy:
    matrix:
-    php-version: [ 8.0, 8.1, 8.2 ]
+    php-version: [ 8.0, 8.1 ]
   steps:
   - name: Checkout
     uses: actions/checkout@v2
@@ -26,5 +26,5 @@ jobs:
     uses: shivammathur/setup-php@2.17.0
     with:
      php-version: ${{ matrix.php-version }}
-  - run: composer install
+  - run: composer install --ignore-platform-reqs
   - run: composer run test
