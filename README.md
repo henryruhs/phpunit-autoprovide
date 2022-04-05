@@ -74,7 +74,7 @@ class ExampleTest extends TestCaseAbstract
 	 *
 	 * @param string $expect
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testMethod(string $expect) : void
