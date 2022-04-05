@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace PHPUnitProviderAutoloader\Tests\Autoloader;
+namespace PHPUnitAutoProvide\Tests\Autoloader;
 
-use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
+use PHPUnitAutoProvide\Tests\TestCaseAbstract;
 
 /**
  * CsvTest
  *
  * @since 2.1.0
  *
- * @package PHPUnitProviderAutoloader
+ * @package PHPUnitAutoProvide
  * @category Tests
  * @author Henry Ruhs
  */

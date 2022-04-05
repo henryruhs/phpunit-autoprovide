@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace PHPUnitProviderAutoloader;
+namespace PHPUnitAutoProvide;
 
 use PHPUnit;
 use Symfony;
@@ -16,7 +16,7 @@ use function str_replace;
  *
  * @since 1.0.0
  *
- * @package PHPUnitProviderAutoloader
+ * @package PHPUnitAutoProvide
  * @category Tests
  * @author Henry Ruhs
  */
@@ -43,7 +43,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 * @return ?string[]
 	 */
 
-	public function providerAutoloader() : ?array
+	public function autoProvide() : ?array
 	{
 		$debugArray = debug_backtrace();
 		$searchArray =

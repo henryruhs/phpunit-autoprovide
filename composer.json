@@ -1,7 +1,7 @@
 {
-	"name": "henryruhs/phpunit-provider-autoloader",
+	"name": "henryruhs/phpunit-autoprovide",
 	"description": "Magic helper to autoload CSV, JSON, PHP, XML and YAML data provider in PHPUnit",
-	"version": "5.0.0",
+	"version": "6.0.0",
 	"license": "MIT",
 	"require":
 	{

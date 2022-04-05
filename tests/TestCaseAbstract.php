@@ -2,21 +2,21 @@
 
 declare(strict_types = 1);
 
-namespace PHPUnitProviderAutoloader\Tests;
+namespace PHPUnitAutoProvide\Tests;
 
-use PHPUnitProviderAutoloader;
+use PHPUnitAutoProvide;
 
 /**
  * TestCaseAbstract
  *
  * @since 1.0.0
  *
- * @package PHPUnitProviderAutoloader
+ * @package PHPUnitAutoProvide
  * @category Tests
  * @author Henry Ruhs
  */
 
-abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstract
+abstract class TestCaseAbstract extends PHPUnitAutoProvide\TestCaseAbstract
 {
 	/**
 	 * namespace of the testing suite
