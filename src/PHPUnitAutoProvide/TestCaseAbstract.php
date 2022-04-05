@@ -38,7 +38,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	/**
 	 * provider autoloader
 	 *
-	 * @since 2.0.0
+	 * @since 6.0.0
 	 *
 	 * @return ?string[]
 	 */
