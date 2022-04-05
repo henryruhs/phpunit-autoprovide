@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace PHPUnitProviderAutoloader;
+namespace PHPUnitAutoProvide;
 
 use function error_reporting;
 

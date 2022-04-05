@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace PHPUnitProviderAutoloader\Tests\Autoloader;
+namespace PHPUnitAutoProvide\Tests\Autoloader;
 
-use PHPUnitProviderAutoloader\Tests\TestCaseAbstract;
+use PHPUnitAutoProvide\Tests\TestCaseAbstract;
 
 /**
  * JsonTest
  *
  * @since 1.0.0
  *
- * @package PHPUnitProviderAutoloader
+ * @package PHPUnitAutoProvide
  * @category Tests
  * @author Henry Ruhs
  */
@@ -23,7 +23,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testClass(string $expect) : void
@@ -36,7 +36,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testMethod(string $expect) : void
