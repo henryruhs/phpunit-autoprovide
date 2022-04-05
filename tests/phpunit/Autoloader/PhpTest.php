@@ -23,7 +23,7 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testClass(string $expect) : void
@@ -36,7 +36,7 @@ class PhpTest extends TestCaseAbstract
 	 *
 	 * @since 2.1.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testMethod(string $expect) : void

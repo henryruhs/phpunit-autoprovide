@@ -34,7 +34,7 @@ use PHPUnitAutoProvide;
  * @category Tests
  */
 
-abstract class TestCaseAbstract extends PHPUnitProviderAutoloader\TestCaseAbstract
+abstract class TestCaseAbstract extends PHPUnitAutoProvide\TestCaseAbstract
 {
 	/**
 	 * directory of the provider

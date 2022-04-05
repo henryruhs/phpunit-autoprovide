@@ -23,7 +23,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testClass(string $expect) : void
@@ -36,7 +36,7 @@ class JsonTest extends TestCaseAbstract
 	 *
 	 * @since 1.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testMethod(string $expect) : void

@@ -23,7 +23,7 @@ class YamlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testClass(string $expect) : void
@@ -36,7 +36,7 @@ class YamlTest extends TestCaseAbstract
 	 *
 	 * @since 2.0.0
 	 *
-	 * @dataProvider providerAutoloader
+	 * @dataProvider autoProvide
 	 */
 
 	public function testMethod(string $expect) : void
