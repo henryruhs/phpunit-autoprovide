@@ -20,7 +20,7 @@
 	{
 		"psr-0":
 		{
-			"PHPUnitProviderAutoloader": "src"
+			"PHPUnitAutoProvide": "src"
 		}
 	},
 	"scripts":
