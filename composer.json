@@ -14,13 +14,20 @@
 	"require-dev":
 	{
 		"isnotdefined/phpcs-config": "2.0.0",
-		"squizlabs/php_codesniffer": "3.6.2"
+		"squizlabs/php_codesniffer": "3.7.1"
 	},
 	"autoload":
 	{
 		"psr-0":
 		{
 			"PHPUnitAutoProvide": "src"
+		}
+	},
+	"config":
+	{
+		"allow-plugins":
+		{
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	},
 	"scripts":
