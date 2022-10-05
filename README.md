@@ -27,25 +27,9 @@ namespace ExampleProject\Tests;
 
 use PHPUnitAutoProvide;
 
-/**
- * TestCaseAbstract
- *
- * @package ExampleProject
- * @category Tests
- */
-
 abstract class TestCaseAbstract extends PHPUnitAutoProvide\TestCaseAbstract
 {
-	/**
-	 * directory of the provider
-	 */
-
 	protected $_providerDirectory = 'tests' . DIRECTORY_SEPARATOR . 'provider';
-
-	/**
-	 * namespace of the testing suite
-	 */
-
 	protected $_testNamespace = __NAMESPACE__;
 }
 ```
@@ -60,23 +44,8 @@ Extend `ExampleTest` from `TestCaseAbstract` and set `@dataProvider` as needed:
 <?php
 namespace ExampleProject\Tests;
 
-/**
- * ExampleTest
- *
- * @package ExampleProject
- * @category Tests
- */
-
 class ExampleTest extends TestCaseAbstract
 {
-	/**
-	 * testMethod
-	 *
-	 * @param string $expect
-	 *
-	 * @dataProvider autoProvide
-	 */
-
 	public function testMethod(string $expect) : void
 	{
 		$this->assertEquals($expect, 'test');
