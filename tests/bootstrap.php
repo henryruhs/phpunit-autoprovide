@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types = 1);
+
 namespace PHPUnitAutoProvide;
 
 use function error_reporting;
