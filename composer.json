@@ -23,6 +23,13 @@
 			"PHPUnitAutoProvide": "src"
 		}
 	},
+	"config":
+	{
+		"allow-plugins":
+		{
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
 	"scripts":
 	{
 		"lint":
