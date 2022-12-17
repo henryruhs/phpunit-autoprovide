@@ -3,7 +3,7 @@ PHPUnit AutoProvide
 
 > Magic helper to autoload CSV, JSON, PHP, XML and YAML data provider in PHPUnit.
 
-[![Build Status](https://img.shields.io/github/workflow/status/henryruhs/phpunit-autoprovide/ci.svg)](https://github.com/henryruhs/phpunit-autoprovide/actions?query=workflow:ci)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/henryruhs/phpunit-autoprovide/ci.yml.svg?branch=master)](https://github.com/henryruhs/phpunit-autoprovide/actions?query=workflow:ci)
 [![Packagist Version](https://img.shields.io/packagist/v/henryruhs/phpunit-autoprovide.svg)](https://packagist.org/packages/henryruhs/phpunit-autoprovide)
 [![License](https://img.shields.io/packagist/l/henryruhs/phpunit-autoprovide.svg)](https://packagist.org/packages/henryruhs/phpunit-autoprovide)
 
